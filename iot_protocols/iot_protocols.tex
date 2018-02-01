@@ -1,0 +1,163 @@
+\documentclass[russian]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[inline]{enumitem}
+\usepackage{xcolor}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{40pt} 
+
+\begin{document}
+
+\title{\textbf{ПОДБОР ПРОТОКОЛОВ ИНТЕРНЕТ ВЕЩЕЙ В КАЧЕСТВЕ ОСНОВНЫХ ПРИ ПЕРЕДАЧИ ИНФОРМАЦИИ С ДАТЧИКОВ СТАНКОВ ЧПУ}}
+
+\author{Хлебников А.~А.\textsuperscript{1}, Кудасов С.~В.\textsuperscript{2}, Курнасов Е.~В.\textsuperscript{3}}
+
+\maketitle
+\thispagestyle{fancy}
+
+1. (viruszold@gmail.com) 2. (lulu@gmail.com)
+\begin{abstract}
+В данной работе проводится анализ популярных протоколов <<Интернет вещей>> исходя из требований 
+надежности, качества и применимости к задаче обеспечения съема информации с мобильных датчиков станков
+ЧПУ посредствам сетей передачи данных WiFi. Также проводится полевая проверка на более чем N датчиков в 
+различных условиях работы.
+\end{abstract}
+
+\section*{Введение}
+
+В связи с широким распростарением принципов <<Интернет вещей>>, стала появляться необходимость 
+не просто взаимодействовать компонентам между собой, но и обеспечивать необходимую надежность, 
+качество и быстроту передачи информации. В совокупности с применяемыми физическими средствами передачи, большую роль
+играет и программные протоколы передачи, а их большое количество и разнообразие приводит к сложному и 
+не однозначному анализу \cite{IoT_Protocols_Research}.
+
+
+\section*{Протоколы}
+
+Разобьем, для удобства, необходимые нам протоколы по назначению:
+\begin{enumerate*}[label={\alph*)},font={\color{red!50!black}\bfseries}]
+\item непосредственный, непрерывная передача информации 
+\item системный, управления.
+ \end{enumerate*}
+И выясним, какие нам подходят для решения нашей задачи.
+ 
+\subsection*{MQTT\cite{MQTT}}
+
+...
+
+\subsection*{CoAP\cite{CoAP}}
+
+...
+
+\subsection*{HTTP2}
+
+...
+
+\subsection*{DDS\cite{DDS}}
+
+...
+
+\subsection*{XMPP\cite{XMPP}}
+
+...
+
+\subsection*{Результат}
+
+...
+
+\section*{Условия проверки}
+
+...
+
+
+\section*{Критерии оценки}
+
+...
+
+\section*{Испытательный стенд}
+
+\subsection*{Схема}
+\subsection*{Устройства}
+\subsection*{Условия}
+
+\section*{Проведение испытаний}
+
+...
+
+\section*{Результаты}
+
+...
+
+\section*{Заключение}
+
+...
+
+%http://www.tssonline.ru/articles2/reviews/analiticheskiy-obzor-protokolov-interneta-veschey
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{cite1}
+\bibinfo{author}{Califano, A.}, \bibinfo{author}{Butte, A.~J.},
+  \bibinfo{author}{Friend, S.}, \bibinfo{author}{Ideker, T.} \&
+  \bibinfo{author}{Schadt, E.}
+\newblock \bibinfo{title}{{Leveraging models of cell regulation and GWAS data
+  in integrative network-based association studies}}.
+\newblock \emph{\bibinfo{journal}{Nature Genetics}}
+  \textbf{\bibinfo{volume}{44}}, \bibinfo{pages}{841--847}
+  (\bibinfo{year}{2012}).
+
+\bibitem{cite2}
+\bibinfo{author}{Wang, R.} \emph{et~al.}
+\newblock \bibinfo{title}{{PRIDE Inspector: a tool to visualize and validate MS
+  proteomics data.}}
+\newblock \emph{\bibinfo{journal}{Nature Biotechnology}}
+  \textbf{\bibinfo{volume}{30}}, \bibinfo{pages}{135--137}
+  (\bibinfo{year}{2012}).
+
+\bibitem{IoT_Protocols_Research}
+\bibinfo{author}{Фам~В.~Д.}, 
+  \bibinfo{author}{Юльчиева~Л.~О.},
+  \bibinfo{author}{Киричек~Р.~В}
+\newblock \bibinfo{title}{{ИССЛЕДОВАНИЕ ПРОТОКОЛОВ ВЗАИМОДЕЙСТВИЯ ИНТЕРНЕТА ВЕЩЕЙ}}.
+\newblock \emph{\bibinfo{journal}{Информационные технологии в телекоммуникации}}
+  \textbf{\bibinfo{volume}{Том 4 №1}}, \bibinfo{pages}{55--67}
+  (\bibinfo{year}{2006}).
+
+\bibitem{DDS}
+\newblock \bibinfo{title}{{OMG/ DDS v1.4 – the DDS specification}}.
+\newblock \emph{\bibinfo{document}{Object Management Group}}
+  (\bibinfo{year}{2015}).
+  
+\bibitem{XMPP}
+\newblock \bibinfo{title}{{ITU-T/ Extensible Messaging and Presence Protocol (XMPP): Core}}.
+\newblock \emph{\bibinfo{document}{RFC-3920}}
+  (\bibinfo{year}{2004}).
+  
+\bibitem{CoAP}
+\newblock \bibinfo{title}{{ITU-T/ The Constrained Application Protocol (CoAP)}}.
+\newblock \emph{\bibinfo{document}{RFC 7252 – Proposed Standard}}
+  (\bibinfo{year}{2014}).
+ 
+\bibitem{MQTT}
+\newblock \bibinfo{title}{{IBM/ MQTT V3.1 Protocol Specification}}.
+\newblock \emph{\bibinfo{document}{International Business Machines Corporation Eurotech}}
+  (\bibinfo{year}{2015}).
+ 
+\bibitem{STOMP}
+\newblock \bibinfo{title}{{STOMP Protocol Specification, Version 1.2}}.
+\newblock \emph{\bibinfo{document}{licensed under the Creative Commons Attribution v2.5 license}}
+  (\bibinfo{year}{2012}).
+  
+\end{thebibliography}
+
+\end{document}
