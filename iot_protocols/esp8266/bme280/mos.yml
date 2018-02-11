@@ -1,0 +1,24 @@
+author: andey.khlebnikov
+description: BME280
+version: 1.0
+
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+platform: esp8266
+sources:
+  - src
+libs:
+  - origin: https://github.com/mongoose-os-libs/ca-bundle
+  - origin: https://github.com/mongoose-os-libs/i2c
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/bme280
+config_schema:
+        - ["i2c.sda_gpio", 4]
+        - ["i2c.scl_gpio", 5]
+tags:
+  - c
+  - i2c
+  - hw
+manifest_version: 2017-09-29
